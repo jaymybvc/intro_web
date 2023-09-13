@@ -1,0 +1,405 @@
+/* basic tags */
+* {
+    box-sizing: border-box;
+  }
+
+.p-50{
+    padding: 0 50px;
+}
+.m-50{
+  margin: auto 50px;
+}
+.main-section{
+  height: 100vh;
+}
+body{
+    margin: 0 auto;
+    margin: 0px;
+    
+}
+.gradient-colour{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 34%, rgba(255,255,255,1) 100%, rgba(0,212,255,1) 100%);
+}
+.contet-between{
+    display: flex;
+    justify-content: space-around;
+}
+.contet-around{
+  display: flex;
+  justify-content: space-between;
+}
+.text-white{
+    color: #fff;
+}
+.button{
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    border : 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
+/* end basic tags */
+/* nav style */
+.nav-colour{
+  background-color: #bab6c2;
+}
+.nav-main{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+ .nav-list{
+    float: left;
+  }
+  
+ .nav-list a {
+    display: block;
+    color: rgb(2,0,36);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.nav-list .active{
+    background-color: rgb(2,0,36);
+    color: #fff;
+  }
+.nav-list a:hover {
+    background-color: #332c40;
+    color: white;
+  }
+
+/* nav style end */
+/* profile  */
+.profile-picture img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid rgb(2,0,36);
+    margin-top: 10%;
+}
+.profile-name {
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+    border-bottom: 4px dotted #fff;
+    width: fit-content;
+}
+.basic-info{
+    width: 500px;
+   
+}
+/* profile end */
+/* education section start */
+.edu-title{
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+  font-size: 35px;
+  width: max-content;
+}
+.liv-title{
+  border-bottom: 2px solid #fff !important;
+}
+.exp-title, .liv-title,.section-title{
+  font-size: 35px;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(2,0,36);
+  width: max-content;
+}
+/* education section end */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+.map-image-section{
+  height: 100vh;
+  background-image: url("../images/maps.jpg");
+}
+.footer{
+  width: 100%;
+  height: 50px;
+  background-color: #bab6c2;
+}
+
+
+
+
+.section-wrapper {
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+@media (max-width: 450px) {
+  .section-wrapper {
+    width: 100%;
+  }
+}
+.section-wrapper:nth-child(3) {
+  padding-right: 8%;
+}
+
+.section-wrapper .skill-percentage {
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+}
+.section-wrapper .skill-percentage::after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  background: #4a4e51;
+  display: block;
+  margin-top: 3px;
+}
+.section-wrapper .skill-percentage::before {
+  content: "";
+  height: 6px;
+  background: #66cc99;
+  position: absolute;
+  margin-top: 3px;
+  bottom: 0;
+}
+.section-wrapper .skill-percentage:nth-child(1)::before {
+  width: 90%;
+  -webkit-animation: skill_1 0.6s ease;
+          animation: skill_1 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(2)::before {
+  width: 95%;
+  -webkit-animation: skill_2 0.6s ease;
+          animation: skill_2 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(3)::before {
+  width: 70%;
+  -webkit-animation: skill_3 0.6s ease;
+          animation: skill_3 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(4)::before {
+  width: 80%;
+  -webkit-animation: skill_4 0.6s ease;
+          animation: skill_4 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(5)::before {
+  width: 70%;
+  -webkit-animation: skill_5 0.6s ease;
+          animation: skill_5 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(6)::before {
+  width: 74%;
+  -webkit-animation: skill_6 0.6s ease;
+          animation: skill_6 0.6s ease;
+}
+.section-wrapper .skill-percentage:nth-child(7)::before {
+  width: 79%;
+  -webkit-animation: skill_6 0.6s ease;
+          animation: skill_6 0.6s ease;
+}
+
+@-webkit-keyframes skill_1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes skill_1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-webkit-keyframes skill_2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes skill_2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes skill_3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes skill_3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@-webkit-keyframes skill_4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes skill_4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@-webkit-keyframes skill_5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes skill_5 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@-webkit-keyframes skill_6 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes skill_6 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@-webkit-keyframes skill_7 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes skill_7 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
